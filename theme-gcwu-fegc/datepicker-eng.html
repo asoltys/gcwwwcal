@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+
+	<!--
+    Calendar interface v1.2a1 / Interface du calendrier v1.2a1
+	GC Web Usability theme v1.0a7 / Thème de la facilité d'emploi GC v1.0a7
+	Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
+	Terms and conditions of use: http://tbs-sct.ircan.gc.ca/projects/gcwwwtemplates/wiki/Terms
+	Conditions régissant l'utilisation : http://tbs-sct.ircan.gc.ca/projects/gcwwwtemplates/wiki/Conditions
+	-->
+
+	<!-- Title begins / Début du titre -->
+	<title>Date Picker - HTML5 - Web Experience Toolkit (WET)</title>
+	<!-- Title ends / Fin du titre -->
+
+	<!-- Favicon (optional) begins / Début du favicon (optionnel) -->
+	<link rel="shortcut icon" href="fip-pcim/images/favicon.ico" />
+	<!-- Favicon (optional) ends / Fin du favicon (optionnel) -->
+
+	<!-- Meta-data begins / Début des métadonnées -->
+	<meta name="dcterms.description" content="English description / Description en anglais" />
+	<meta name="description" content="English description / Description en anglais" />
+	<meta name="keywords" content="English keywords / Mots-clés en anglais" />
+	<meta name="dcterms.creator" content="English name of the content author / Nom en anglais de l'auteur du contenu" />
+	<meta name="dcterms.title" content="English title / Titre en anglais" />
+	<meta name="dcterms.issued" title="W3CDTF" content="Date published (YYYY-MM-DD) / Date de publication (AAAA-MM-JJ)" />
+	<meta name="dcterms.modified" title="W3CDTF" content="Date modified (YYYY-MM-DD) / Date de modification (AAAA-MM-JJ)" />
+	<meta name="dcterms.subject" title="scheme" content="English subject terms / Termes de sujet en anglais" />
+	<meta name="dcterms.language" title="ISO639-2" content="eng" />
+	<!-- Meta-data ends / Fin des métadonnées -->
+
+	<!-- WET scripts/CSS begin / Début des scripts/CSS de la BOEW --><!--[if IE 6]><![endif]-->
+	<link href="../css/base.css" rel="stylesheet" />
+	<!--[if IE 8]><link href="../css/base-ie8.css" rel="stylesheet" /><![endif]-->
+	<!--[if IE 7]><link href="../css/base-ie7.css" rel="stylesheet" /><![endif]-->
+	<!--[if lte IE 6]><link href="../css/base-ie6.css" media="screen" rel="stylesheet" /><![endif]-->
+<!-- CSS Grid System begins / Début du système de grille de CSS -->
+	<link href="../grids/css/grid.css" media="screen" rel="stylesheet" />
+	<link href="../grids/css/util.css" media="screen" rel="stylesheet" />
+<!-- CSS Grid System ends / Fin du système de grille de CSS -->
+<!-- GC Web Usability theme begins / Début du thème de la facilité d'emploi GC -->
+	<link href="css/framework-default-theme-gcwu-fegc.css" media="screen" rel="stylesheet" id="framework-responsive" />
+	<link href="css/theme-gcwu-fegc.css" rel="stylesheet" />
+	<!--[if IE 8]><link href="css/theme-gcwu-fegc-ie8.css" rel="stylesheet" /><![endif]-->
+	<!--[if IE 7]><link href="css/theme-gcwu-fegc-ie7.css" rel="stylesheet" /><![endif]-->
+	<!--[if lte IE 6]><link href="css/theme-gcwu-fegc-ie6.css" rel="stylesheet" /><![endif]-->
+<!-- GC Web Usability theme ends / Fin du thème de la facilité d'emploi GC -->
+<!-- Menu bar begins / Début de la barre de menu -->
+	<link href="../js/support/menubar/style.css" rel="stylesheet" />
+<!-- Menu bar ends /Fin de la barre de menu -->
+<!-- FIP visual elements and identifiers begin / Début des éléments et identificateurs visuels de PCIM -->
+	<link href="fip-pcim/css/fip-pcim.css" rel="stylesheet" />
+	<!--[if IE 8]><link href="fip-pcim/css/fip-pcim-ie8.css" rel="stylesheet" /><![endif]-->
+	<!--[if IE 7]><link href="fip-pcim/css/fip-pcim-ie7.css" rel="stylesheet" /><![endif]-->
+	<!--[if lte IE 6]><link href="fip-pcim/css/fip-pcim-ie6.css" rel="stylesheet" /><![endif]-->
+<!-- FIP visual elements and identifiers end / Fin des éléments et identificateurs visuels de PCIM -->
+	<!-- WET scripts/CSS end / Fin des scripts/CSS de la BOEW -->
+
+	<!-- Progressive enhancement begins / Début de l'amélioration progressive -->
+	<script src="../js/lib/jquery.min.js"></script>
+	<script src="../js/pe-ap.js" id="progressive"></script>
+	<script>
+	/* <![CDATA[ */
+		var params = {
+            datepicker: 'active',
+			menubar : ""
+		};
+		PE.progress(params);
+	/* ]]> */
+	</script>
+	<!-- Progressive enhancement ends / Fin de l'amélioration progressive -->
+
+	<!-- Custom scripts/CSS begin / Début des scripts/CSS personnalisés -->
+	<!-- Custom scripts/CSS end / Fin des scripts/CSS personnalisés -->
+</head>
+<body itemscope="itemscope" itemtype="http://schema.org/WebPage">
+<!-- Two column layout begins / Début de la mise en page de deux colonnes -->
+<div id="cn-body-inner-2col">
+	<!-- Skip header begins / Début du saut de l'en-tête -->
+	<div id="cn-skip-head">
+		<ul id="cn-tphp">
+			<li id="cn-sh-link-1"><a href="#cn-cont">Skip to main content</a></li>
+			<li id="cn-sh-link-2"><a href="#cn-nav">Skip to side navigation</a></li>
+		</ul>
+	</div>
+	<!-- Skip header ends / Fin du saut de l'en-tête -->
+
+	<!-- Header begins / Début de l'en-tête -->
+	<div id="cn-head"><div id="cn-head-inner">
+	<header itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+<!-- GC Web Usability theme begins / Début du thème de la facilité d'emploi GC -->
+		<!-- GC navigation bar begins / Début de la barre de navigation GC -->
+		<nav role="navigation">
+			<div id="cn-gcnb">
+				<h2>Government of Canada navigation bar</h2>
+				<div id="cn-gcnb-inner">
+					<div id="fip-pcim-gcnb" itemscope="itemscope" itemtype="http://schema.org/WPAdBlock">
+						<div id="cn-sig"><div id="cn-sig-inner"><div id="fip-pcim-sig-eng" title="Government of Canada"><img src="fip-pcim/images/sig-eng.gif" width="214" height="20" alt="Government of Canada" /></div></div></div>
+						<ul>
+							<li id="cn-gcnb1"><a rel="external" href="http://www.canada.gc.ca/home.html">Canada.gc.ca</a></li>
+							<li id="cn-gcnb2"><a rel="external" href="http://www.servicecanada.gc.ca/eng/home.shtml">Services</a></li>
+							<li id="cn-gcnb3"><a rel="external" href="http://www.canada.gc.ca/depts/major/depind-eng.html">Departments</a></li>
+							<li id="cn-gcnb-lang" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement"><a href="datepicker-fra.html" lang="fr">Français</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<!-- GC navigation bar ends / Fin de la barre de navigation GC -->
+
+		<!-- Banner begins / Début de la bannière -->
+		<div id="cn-banner" role="banner"><div id="cn-banner-inner">
+			<div id="cn-wmms"><div id="cn-wmms-inner"><div id="fip-pcim-wmms" title="Symbol of the Government of Canada"><img src="fip-pcim/images/wmms.gif" width="126" height="30"  alt="Symbol of the Government of Canada" /></div></div></div>
+
+			<!-- Site title begins / Début du titre du site -->
+			<div id="cn-site-title"><p id="cn-site-title-inner"><a href="home-accueil-megamenu-theme-gcwu-fegc-eng.html">Site title</a></p></div>
+			<!-- Site title ends / Fin du titre du site -->
+
+			<!-- Site search begins / Début de la recherche du site -->
+			<section role="search">
+				<div id="cn-search-box">
+					<h2>Search</h2>
+					<form action="#" method="post">
+						<div id="cn-search-box-inner">
+							<label for="cn-search">Search Web site</label>
+							<input id="cn-search" name="cn-search" type="text" value="" size="27" maxlength="150" />
+							<input id="cn-search-submit" name="cn-search-submit" type="submit" value="Search" />
+						</div>
+					</form>
+				</div>
+			</section>
+			<!-- Site search ends / Fin de la recherche du site -->
+		</div></div>
+		<!-- Banner ends / Fin de la bannière -->
+
+		<nav role="navigation">
+			<!-- Site navigation bar begins / Début de la barre de navigation du site -->
+			<div id="cn-psnb">
+				<h2>Site navigation bar</h2>
+				<div id="cn-psnb-inner">
+					<div class="wet-boew-menubar" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+						<ul class="wet-boew-menu wet-boew-megamenu">
+							<li>
+								<section>
+									<h3 class="toplevel"><a class="first" href="#">Section 1</a></h3>
+									<div class="showcase">
+										<div class="span-2">
+											<section>
+												<h4 class="col-head"><a href="#">Section 1.1</a></h4>
+												<ul>
+													<li>
+														<a href="#">Item 1.1.1</a>
+													</li>
+													<li>
+														<a href="#">Item 1.1.2</a>
+													</li>
+													<li>
+														<a href="#">Item 1.1.3</a>
+													</li>
+													<li>
+														<a href="#">Item 1.1.4</a>
+													</li>
+													<li>
+														<a href="#">Item 1.1.5</a>
+													</li>
+													<li>
+														<a href="#">Item 1.1.6</a>
+													</li>
+													<li>
+														<a href="#">Item 1.1.7</a>
+													</li>
+													<li>
+														<a href="#">Item 1.1.8</a>
+													</li>
+												</ul>
+											</section>
+										</div>
+										<div class="span-2">
+											<section>
+												<h4 class="col-head"><a href="#">Section 1.2</a></h4>
+												<ul>
+													<li>
+														<a href="#">Item 1.2.1</a>
+													</li>
+													<li>
+														<a href="#">Item 1.2.2</a>
+													</li>
+													<li>
+														<a href="#">Item 1.2.3</a>
+													</li>
+													<li>
+														<a href="#">Item 1.2.4</a>
+													</li>
+													<li>
+														<a href="#">Item 1.2.5</a>
+													</li>
+													<li>
+														<a href="#">Item 1.2.6</a>
+													</li>
+													<li>
+														<a href="#">Item 1.2.7</a>
+													</li>
+													<li>
+														<a href="#">Item 1.2.8</a>
+													</li>
+												</ul>
+											</section>
+										</div>
+										<div class="span-2">
+											<section>
+												<h4 class="col-head"><a href="#">Section 1.3</a></h4>
+												<ul>
+													<li>
+														<a href="#">Item 1.3.1</a>
+													</li>
+													<li>
+														<a href="#">Item 1.3.2</a>
+													</li>
+												</ul>
+											</section>
+										</div>
+									</div>
+								</section>
+							</li>
+							<li>
+								<section>
+									<h3 class="toplevel"><a href="section2-eng.html">Section 2</a></h3>
+									<div class="showcase">
+										<div class="span-2">
+											<section>
+												<h4 class="col-head"><a href="#">Section 2.1</a></h4>
+												<ul>
+													<li>
+														<a href="#">Item 2.1.1</a>
+													</li>
+													<li>
+														<a href="#">Item 2.1.2</a>
+													</li>
+													<li>
+														<a href="#">Item 2.1.3</a>
+													</li>
+													<li>
+														<a href="#">Item 2.1.4</a>
+													</li>
+													<li>
+														<a href="#">Item 2.1.5</a>
+													</li>
+													<li>
+														<a href="#">Item 2.1.6</a>
+													</li>
+												</ul>
+											</section>
+										</div>
+										<div class="span-2">
+											<section>
+												<h4 class="col-head"><a href="#">Section 2.2</a></h4>
+												<ul>
+													<li>
+														<a href="#">Item 2.2.1</a>
+													</li>
+													<li>
+														<a href="#">Item 2.2.2</a>
+													</li>
+													<li>
+														<a href="#">Item 2.2.3</a>
+													</li>
+													<li>
+														<a href="#">Item 2.2.4</a>
+													</li>
+													<li>
+														<a href="#">Item 2.2.5</a>
+													</li>
+													<li>
+														<a href="#">Item 2.2.6</a>
+													</li>
+													<li>
+														<a href="#">Item 2.2.7</a>
+													</li>
+													<li>
+														<a href="#">Item 2.2.8</a>
+													</li>
+												</ul>
+											</section>
+										</div>
+										<div class="span-2">
+											<section>
+												<h4 class="col-head"><a href="#">Section 2.3</a></h4>
+												<ul>
+													<li>
+														<a href="#">Item 2.3.1</a>
+													</li>
+													<li>
+														<a href="#">Item 2.3.2</a>
+													</li>
+													<li>
+														<a href="#">Item 2.3.3</a>
+													</li>
+												</ul>
+											</section>
+										</div>
+									</div>
+								</section>
+							</li>
+							<li>
+								<div class="toplevel"><a href="#">Section 3</a></div>
+							</li>
+							<li>
+								<div class="toplevel"><a href="#">Section 4</a></div>
+							</li>
+							<li>
+								<div class="toplevel"><a href="#">Section 5</a></div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- Site navigation bar ends / Fin de la barre de navigation du site -->
+
+			<!-- Breadcrumbs begins / Début du fil d'Ariane -->
+			<div id="cn-bc">
+				<h2>Breadcrumbs</h2>
+				<div id="cn-bc-inner">
+					<ol itemprop="breadcrumb">
+						<li><a href="home-accueil-megamenu-theme-gcwu-fegc-eng.html">Home</a></li>
+						<li><a href="section2-eng.html">Section 2</a></li>
+						<li>Date Picker - GC Web Usability theme</li>
+					</ol>
+				</div>
+			</div>
+			<!-- Breadcrumbs end / Fin du fil d'Ariane -->
+		</nav>
+<!-- GC Web Usability theme ends / Fin du thème de la facilité d'emploi GC -->
+	</header>
+	</div></div>
+	<!-- Header ends / Fin de l'en-tête -->
+
+	<!-- Columns begin / Début des colonnes -->
+	<div id="cn-cols"><div id="cn-cols-inner" class="equalize">
+		<!-- Main content begins / Début du contenu principal -->
+		<div id="cn-centre-col" role="main" itemprop="mainContentOfPage"><div id="cn-centre-col-inner">
+			<!-- Content title begins / Début du titre du contenu -->
+			<h1 id="cn-cont" itemprop="name">Date Picker - GC Web Usability theme</h1>
+			<!-- Content Title ends / Fin du titre du contenu -->
+
+<!-- GC Web Usability theme begins / Début du thème de la facilité d'emploi GC -->
+            <form method="get">
+                <div>
+                    <label for="startdate">Start Date (<abbr title="Four digits year">YYYY</abbr>-<abbr title="Two digits month">MM</abbr>-<abbr title="Two digits day">DD</abbr>):</label>
+
+                    <input type="text" id="startdate" name="startdate" class="date-picker" />
+                </div>
+                <div>
+                    <label for="enddate">End Date (<abbr title="Two digits day">DD</abbr>-<abbr title="Two digits month">MM</abbr>-<abbr title="Four digits year">YYYY</abbr>):</label>
+                    <input type="text" id="enddate" name="enddate" class="date-picker" data-date-format="DD-MM-YYYY" />
+
+                </div>
+                <div>
+                    <input type="submit" value="Submit" />
+                </div>
+            </form>
+			<!-- Date Modified begins / Début de la date de modification -->
+			<dl id="cn-doc-dates" role="contentinfo">
+				<dt>Date modified:</dt>
+				<dd><span><time pubdate="pubdate" itemprop="dateModified">2011-10-31</time></span></dd>
+			</dl>
+			<div class="clear"></div>
+			<!-- Date Modified ends / Fin de la date de modification -->
+<!-- GC Web Usability theme ends / Fin du thème de la facilité d'emploi GC -->
+		</div></div>
+		<!-- Main content ends / Fin du contenu principal -->
+
+		<!-- Side navigation (left column) begins / Début de la navigation latérale (colonne gauche) -->
+		<div id="cn-left-col" itemscope="itemscope" itemtype="http://schema.org/WPSideBar"><div id="cn-left-col-inner">
+		<nav role="navigation">
+			<h2 id="cn-nav">Side navigation (left column)</h2>
+			<div class="cn-left-col-default">
+<!-- GC Web Usability theme begins / Début du thème de la facilité d'emploi GC -->
+				<section>
+					<h3><a href="#">Section 1</a></h3>
+					<ul>
+						<li><a href="#">Item 1a</a>
+							<ul>
+								<li><a href="#">Item 1ai</a></li>
+								<li><a href="#">Item 1aii</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Item 1b</a></li>
+						<li><a href="#">Item 1c</a></li>
+					</ul>
+				</section>
+				<section>
+					<h3><a href="section2-eng.html">Section 2</a></h3>
+					<ul>
+						<li><a href="#">Item 2a</a></li>
+						<li><a href="#">Item 2b</a></li>
+						<li><a href="#">Item 2c</a></li>
+					</ul>
+				</section>
+				<section>
+					<h3><a href="#">Section 3</a></h3>
+					<ul>
+						<li><a href="#">Item 3a</a></li>
+						<li><a href="#">Item 3b</a></li>
+						<li><a href="#">Item 3c</a></li>
+					</ul>
+				</section>
+				<section>
+					<h3><a href="#" class="nav-current">Current section (4) example </a></h3>
+					<ul>
+						<li><a href="#">Item 4a</a></li>
+						<li><a href="#" class="nav-current">Current item (4b) example</a>
+							<ul>
+								<li><a href="#">Item 4bi</a></li>
+								<li><a href="#" class="nav-current">Current sub (4bii) item example</a></li>
+								<li><a href="#">Item 4biii</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Item 4c</a></li>
+					</ul>
+				</section>
+				<div class="toplevel"><a href="#">Top level link 1</a></div>
+				<div class="toplevel"><a href="#">Top level link 2</a></div>
+<!-- GC Web Usability theme ends / Fin du thème de la facilité d'emploi GC -->
+			</div>
+		</nav>
+		</div></div>
+		<!-- Side navigation (left column) ends / Fin de la navigation latérale (colonne gauche) -->
+	</div></div>
+	<!-- Columns end / Fin des colonnes -->
+
+	<!-- Footer begins / Début du pied de page -->
+	<div id="cn-foot"><div id="cn-foot-inner">
+	<footer itemscope="itemscope" itemtype="http://schema.org/WPFooter">
+		<h2>Footer</h2>
+<!-- GC Web Usability theme begins / Début du thème de la facilité d'emploi GC -->
+		<!-- Site footer begins / Début du pied de page du site -->
+		<nav role="navigation">
+			<div id="cn-sft">
+				<h3>Site footer</h3>
+				<div id="cn-sft-inner" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+					<div id="cn-ft-tctr">
+						<ul>
+							<li class="terms"><a href="#" rel="license">Terms and conditions</a></li>
+							<li class="trans"><a href="#">Transparency</a></li>
+						</ul>
+					</div>
+					<div class="clear"></div>
+					<section>
+						<div class="span-2">
+							<h4 class="col-head"><a href="#">About us</a></h4>
+							<ul>
+								<li><a href="#">Our Mandate</a></li>
+								<li><a href="#">Our Minister</a></li>
+							</ul>
+						</div>
+					</section>
+					<section>
+						<div class="span-2">
+							<h4 class="col-head"><a href="#">News</a></h4>
+							<ul>
+								<li><a href="#">News releases</a></li>
+								<li><a href="#">Media advisories</a></li>
+								<li><a href="#">Multimedia</a></li>
+							</ul>
+						</div>
+					</section>
+					<section>
+						<div class="span-2">
+							<h4 class="col-head"><a href="#">Contact us</a></h4>
+							<address>
+								<ul>
+									<li><a href="#">Phone numbers</a></li>
+									<li><a href="#">Office locations</a></li>
+								</ul>
+							</address>
+						</div>
+					</section>
+					<section>
+						<div class="span-2">
+							<h4 class="col-head"><a href="#">Stay connected</a></h4>
+							<ul>
+								<li><a rel="external" href="#">YouTube</a></li>
+								<li><a rel="external" href="#">Twitter</a></li>
+								<li><a href="#">Feeds</a></li>
+							</ul>
+						</div>
+					</section>
+				</div>
+			</div>
+		</nav>
+		<!-- Site footer ends / Fin du pied de page du site -->
+
+		<!-- GC footer begins / Début du pied de page GC -->
+		<nav role="navigation">
+			<div id="cn-gcft">
+				<h3>Government of Canada footer</h3>
+				<div id="cn-gcft-inner">
+					<div id="fip-pcim-gcft" itemscope="itemscope" itemtype="http://schema.org/WPAdBlock">
+						<ul>
+							<li><a rel="external" href="http://healthycanadians.gc.ca/index-eng.php"><span>Health</span><br />healthycanadians.gc.ca</a></li>
+							<li><a rel="external" href="http://www.voyage.gc.ca/index-eng.asp"><span>Travel</span><br />travel.gc.ca</a></li>
+							<li><a rel="external" href="http://www.servicecanada.gc.ca/eng/home.shtml"><span>Service Canada</span><br />servicecanada.gc.ca</a></li>
+							<li><a rel="external" href="http://www.jobbank.gc.ca/intro-eng.aspx"><span>Jobs</span><br />jobbank.gc.ca</a></li>
+							<li><a rel="external" href="http://actionplan.gc.ca/eng/index.asp"><span>Economy</span><br />actionplan.gc.ca</a></li>
+							<li id="cn-ft-ca"><div><a rel="external" href="http://www.canada.gc.ca/home.html">Canada.gc.ca</a></div></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<!-- GC footer ends / Fin du pied de page GC -->
+<!-- GC Web Usability theme ends / Fin du thème de la facilité d'emploi GC -->
+	</footer>
+	</div></div>
+	<!-- Footer ends / Fin du pied de page -->
+</div>
+<!-- Two column layout ends / Fin de la mis en page de deux colonnes -->
+</body>
+</html>

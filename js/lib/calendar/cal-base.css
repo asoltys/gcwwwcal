@@ -1,0 +1,55 @@
+@charset "utf-8";
+/*!
+ * Calendar interface v1.1 / Interface du calendrier v1.1
+ * Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
+ * Terms and conditions of use: http://tbs-sct.ircan.gc.ca/projects/gcwwwtemplates/wiki/Terms
+ * Conditions régissant l'utilisation : http://tbs-sct.ircan.gc.ca/projects/gcwwwtemplates/wiki/Conditions
+ */
+
+ol.cal-weekdays{
+	margin:0;
+    font-weight: bold;
+}
+
+div.cal-month {
+    text-align: center;
+}
+
+ol.cal-weekdays li {text-align: center;}
+.cal-goto-link {text-align: center; margin: 0;}
+.cal-goto-month, .cal-goto-button {float: left;}
+
+div.cal-days ol.cal-day-list, div.cal-cnt ol.cal-weekdays{
+	list-style-type:none; 
+	margin:0;
+	padding:0;
+}
+
+div.cal-days ol.cal-day-list li,  div.cal-cnt ol.cal-weekdays li{
+	margin:0;
+}
+
+div.cal-days span.cal-empty, div.cal-days ol.cal-day-list li, ol.cal-weekdays li{
+	position:relative;
+	float:left;
+	border-width:0;
+	border-left-width:1px;
+	border-bottom-width:1px;
+	width:13%;
+	text-align: center;
+}
+
+div.cal-days ol.cal-day-list li a {text-align: right; padding-right: 0.2em; }
+div.cal-cnt ol.cal-weekdays li, div.cal-days ol.cal-day-list li, div.cal-days span {margin: 1px;}
+div.ui-datepicker {padding-bottom: 0.4em;}
+div.cal-cnt {font-size: 0.9em;}
+
+ol.cal-weekdays li.cal-wd7, div.cal-days ol.cal-day-list .cal-w1d7, div.cal-days ol.cal-day-list .cal-w2d7, div.cal-days ol.cal-day-list .cal-w3d7, div.cal-days ol.cal-day-list .cal-w4d7, div.cal-days ol.cal-day-list .cal-w5d7, div.cal-days ol.cal-day-list .cal-w6d7, div.cal-days span.cal-empty.cal-w5d7, div.cal-days span.cal-empty.cal-w6d7{
+	border-right-width:1px;
+	clear:right;
+}
+
+span.cal-empty, ol.cal-weekdays li, div.cal-days a, div.cal-days div{
+	display:block;
+	padding:0.5em 0;
+}

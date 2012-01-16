@@ -33,7 +33,7 @@ var datepicker = {
 					pairs = m.split(',')
 					for(p=0; p<pairs.length;p++){
 						i = pairs[p].split(':');
-						xhtml_vars[i[0].replace(' ', '')] = i[1].replace(' ', '');
+						xhtml_vars[jQuery.trim(i[0])] = jQuery.trim(i[1]);
 					}
 				}
 				
@@ -50,7 +50,7 @@ var datepicker = {
 				if ($(this).attr("data-max-date") != null){
 					maxDate = $(this).attr("data-max-date");
 				}else if(xhtml_vars["min-date"]){
-					maxDate = xhtml_vars["min-date"];
+					maxDate = xhtml_vars["max-date"];
 				}else{
 					maxDate = '2100-01-01';
 				}
@@ -68,6 +68,13 @@ var datepicker = {
 				var field = $(this);
 				var containerid = id + '-picker'
 				var container = $('<div id="' + containerid + '" class=\"picker-overlay\" role="dialog" aria-controls="' + id + '" aria-labelledby="' + containerid +'-toggle"></div>');
+
+                container.bind('keyup', function(e){ // Escape key to close popup
+                    if (e.keyCode == 27) {
+                        datepicker.toggle(id, containerid);
+                    }
+                });
+
 				field.parent().after(container)
 				
 				container.bind("calendarDisplayed", function(e, year,  month, days){
@@ -153,6 +160,7 @@ var datepicker = {
 		//Get the date from the field
 		var date = $("#" + fieldid).attr("value");
 		regex = XRegExp(pattern, "x");
+        
 		try{
 			if (date != '')
 			{
@@ -188,6 +196,8 @@ var datepicker = {
 			container.slideDown('fast', function(){datepicker.ieFix($(this))});
 			container.attr("aria-hidden","false");
 			toggle.children("a").children("span").text(datepicker.dictionary.hideText);
+
+            $('.cal-prevmonth a').focus();
 		}else{
 			//Disable the tabbing of all the links when calendar is hidden
 			container.find("a").attr("tabindex", -1);

@@ -69,9 +69,11 @@ var datepicker = {
 				var containerid = id + '-picker'
 				var container = $('<div id="' + containerid + '" class=\"picker-overlay\" role="dialog" aria-controls="' + id + '" aria-labelledby="' + containerid +'-toggle"></div>');
 
-                container.bind('keyup', function(e){ // Escape key to close popup
+                // Escape key to close popup
+                container.bind('keyup', function(e){ 
                     if (e.keyCode == 27) {
-                        datepicker.toggle(id, containerid);
+                        datepicker.hideAll();
+                        $('#' + id + '-picker-toggle').focus();
                     }
                 });
 
@@ -84,6 +86,16 @@ var datepicker = {
 				calendar.create(containerid, year, month, true, minDate, maxDate); 
 				datepicker.createToggleIcon(id, containerid);
 
+                // Close the popup a second after blur
+                container.find('a, select').blur(function(){
+                    window.setTimeout(function(){
+                        if(container.find(':focus').length === 0) {
+                            datepicker.hideAll();
+                        }
+                    }, 1000);
+                });
+
+                // 'Hide' link at the bottom of calendar to close the popup without selecting a date
                 $('<a class="picker-close" href="javascript:;">' + datepicker.dictionary.hideText + '</a>').appendTo(container)
                     .click(function(){
                         datepicker.toggle(id, containerid);

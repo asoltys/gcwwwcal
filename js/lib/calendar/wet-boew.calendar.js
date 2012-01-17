@@ -24,7 +24,7 @@ var calendar = {
 		var objCalendar;
 		var container = $('#' + containerid);
 		
-		container.addClass("cal-container ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all");
+		container.addClass("cal-container ui-datepicker ui-widget ui-widget-content wet-ui-helper-clearfix ui-corner-all");
 		container.removeClass("cal-container-extended");
 		
 		//Converts min and max date from string to date objects
@@ -61,7 +61,7 @@ var calendar = {
 		if (container.children("div#cal-" + containerid +"-cnt").children(".cal-header").length > 0){
 			calHeader = container.children("div#cal-" + containerid +"-cnt").children(".cal-header")
 		}else{
-			calHeader = $("<div class=\"cal-header ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-all\"></div>");
+			calHeader = $("<div class=\"cal-header ui-datepicker-header ui-widget-header wet-ui-helper-clearfix ui-corner-all\"></div>");
 		}
 		
 		calHeader.prepend("<div class=\"cal-month\">" + this.dictionary.monthNames[month] + " " + year + "</div>" );

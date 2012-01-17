@@ -81,19 +81,19 @@ var datepicker = {
 				
 				container.bind("calendarDisplayed", function(e, year,  month, days){
 					datepicker.addLinksToCalendar(id, year, month, days, minDate, maxDate, format);
-					datepicker.setSelectedDate(id, year, month, days, format)
+					datepicker.setSelectedDate(id, year, month, days, format);
+
+                    // Close the popup a second after blur
+                    container.find('a, select').blur(function(){
+                        window.setTimeout(function(){
+                            if(container.find(':focus').length === 0) {
+                                datepicker.hideAll();
+                            }
+                        }, 1000);
+                    });                    
 				});
 				calendar.create(containerid, year, month, true, minDate, maxDate); 
 				datepicker.createToggleIcon(id, containerid);
-
-                // Close the popup a second after blur
-                container.find('a, select').blur(function(){
-                    window.setTimeout(function(){
-                        if(container.find(':focus').length === 0) {
-                            datepicker.hideAll();
-                        }
-                    }, 1000);
-                });
 
                 // 'Hide' link at the bottom of calendar to close the popup without selecting a date
                 $('<a class="picker-close" href="javascript:;">' + datepicker.dictionary.hideText + '</a>').appendTo(container)

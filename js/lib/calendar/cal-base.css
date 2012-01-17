@@ -53,3 +53,8 @@ span.cal-empty, ol.cal-weekdays li, div.cal-days a, div.cal-days div{
 	display:block;
 	padding:0.5em 0;
 }
+
+/* Chrome fix for jQueryUI 1.8.16's clearfix (taken from jQueryUI 1.8.17) */
+.wet-ui-helper-clearfix:before, .wet-ui-helper-clearfix:after { content: ""; display: table; }
+.wet-ui-helper-clearfix:after { clear: both; }
+.wet-ui-helper-clearfix { zoom: 1; }   

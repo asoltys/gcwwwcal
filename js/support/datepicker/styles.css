@@ -11,7 +11,9 @@
 	margin-top:-2em;
 }
 
-
+.picker-close {
+    float: right;
+}
 
 .picker-field{
 	width:7em;

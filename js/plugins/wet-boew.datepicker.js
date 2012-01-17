@@ -11,9 +11,9 @@ var datepicker = {
 	
 	// Used to store localized strings for your plugin.
 	dictionary : { 
-		hideText : (PE.language == "eng") ? "Hide Calendar" : "Masquer le calendrier",
-	       showText : (PE.language == "eng") ?  "Pick a date from a calendar for field: " : "Sélectionner une date à partir d'un calendrier pour le champ : ",
-	       selectedText : (PE.language == "eng") ?  "Selected" : "Sélectionné"
+        hideText : (PE.language == "eng") ? "Hide Calendar" : "Masquer le calendrier",
+        showText : (PE.language == "eng") ?  "Pick a date from a calendar for field: " : "Sélectionner une date à partir d'un calendrier pour le champ : ",
+        selectedText : (PE.language == "eng") ?  "Selected" : "Sélectionné"
 	},
 	
 	// Method that is executed when the page loads
@@ -83,6 +83,11 @@ var datepicker = {
 				});
 				calendar.create(containerid, year, month, true, minDate, maxDate); 
 				datepicker.createToggleIcon(id, containerid);
+
+                $('<a class="picker-close" href="javascript:;">' + datepicker.dictionary.hideText + '</a>').appendTo(container)
+                    .click(function(){
+                        datepicker.toggle(id, containerid);
+                    });
 				
 				//Disable the tabbing of all the links when calendar is hidden
 				container.find("a").attr("tabindex", -1);

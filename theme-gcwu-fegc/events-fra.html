@@ -4,15 +4,14 @@
 	<meta charset="utf-8" />
 
 	<!--
-    Calendar interface v1.2b3 / Interface du calendrier v1.2b3
-	GC Web Usability theme v1.0b5 / Thème de la facilité d'emploi GC v1.0b5
+	GC Web Usability theme v1.0rc3 / Thème de la facilité d'emploi GC v1.0rc3
 	Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
 	Terms and conditions of use: http://tbs-sct.ircan.gc.ca/projects/gcwwwtemplates/wiki/Terms
 	Conditions régissant l'utilisation : http://tbs-sct.ircan.gc.ca/projects/gcwwwtemplates/wiki/Conditions
 	-->
 
 	<!-- Title begins / Début du titre -->
-	<title>Événements - HTML5 - Boîte à outils de l'expérience Web (BOEW)</title>
+	<title>2 colonnes - Mégamenu - Thème de la facilité d'emploi GC - HTML5 - Boîte à outils de l'expérience Web (BOEW)</title>
 	<!-- Title ends / Fin du titre -->
 
 	<!-- Favicon (optional) begins / Début du favicon (optionnel) -->
@@ -74,7 +73,7 @@
 	<!-- Custom scripts/CSS begin / Début des scripts/CSS personnalisés -->
 	<!-- Custom scripts/CSS end / Fin des scripts/CSS personnalisés -->
 </head>
-<body itemscope="itemscope" itemtype="http://schema.org/WebPage">
+<body>
 <!-- Two column layout begins / Début de la mise en page de deux colonnes -->
 <div id="cn-body-inner-2col">
 	<!-- Skip header begins / Début du saut de l'en-tête -->
@@ -88,20 +87,20 @@
 
 	<!-- Header begins / Début de l'en-tête -->
 	<div id="cn-head"><div id="cn-head-inner">
-	<header itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+	<header>
 <!-- GC Web Usability theme begins / Début du thème de la facilité d'emploi GC -->
 		<!-- GC navigation bar begins / Début de la barre de navigation GC -->
 		<nav role="navigation">
 			<div id="cn-gcnb">
 				<h2>Barre de navigation de la gouvernement de Canada</h2>
 				<div id="cn-gcnb-inner">
-					<div id="fip-pcim-gcnb" itemscope="itemscope" itemtype="http://schema.org/WPAdBlock">
+					<div id="fip-pcim-gcnb">
 						<div id="cn-sig"><div id="cn-sig-inner"><div id="fip-pcim-sig-fra" title="Gouvernement du Canada"><img src="fip-pcim/images/sig-fra.gif" width="214" height="20" alt="Gouvernement du Canada" /></div></div></div>
 						<ul>
 							<li id="cn-gcnb1"><a rel="external" href="http://www.canada.gc.ca/accueil.html">Canada.gc.ca</a></li>
 							<li id="cn-gcnb2"><a rel="external" href="http://www.servicecanada.gc.ca/fra/accueil.shtml">Services</a></li>
 							<li id="cn-gcnb3"><a rel="external" href="http://www.canada.gc.ca/depts/major/depind-fra.html">Ministères</a></li>
-							<li id="cn-gcnb-lang" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement"><a href="events-eng.html" lang="en">English</a></li>
+							<li id="cn-gcnb-lang"><a href="events-eng.html" lang="en">English</a></li>
 						</ul>
 					</div>
 				</div>
@@ -139,32 +138,35 @@
 			<div id="cn-psnb">
 				<h2>Barre de navigation du site</h2>
 				<div id="cn-psnb-inner">
-					<div class="wet-boew-menubar wet-boew-megamenu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-						<ul class="wet-boew-menu">
+					<div class="wet-boew-menubar mb-megamenu"><div>
+						<ul class="mb-menu">
 							<li>
 								<section>
 									<h3><a href="#">Section 1</a></h3>
-									<div class="showcase">
-										<ul>
-											<li><a href="#">Article 1.1</a></li>
-											<li><a href="#">Article 1.2</a></li>
-											<li><a href="#">Article 1.3</a></li>
-											<li><a href="#">Article 1.4</a></li>
-											<li><a href="#">Article 1.5</a></li>
-											<li><a href="#">Article 1.6</a></li>
-											<li><a href="#">Article 1.7</a></li>
-											<li><a href="#">Article 1.8</a></li>
-										</ul>
+									<div class="mb-sm">
+										<div class="span-2">
+											<ul>
+												<li><a href="#">Article 1.1</a></li>
+												<li><a href="#">Article 1.2</a></li>
+												<li><a href="#">Article 1.3</a></li>
+												<li><a href="#">Article 1.4</a></li>
+												<li><a href="#">Article 1.5</a></li>
+												<li><a href="#">Article 1.6</a></li>
+												<li><a href="#">Article 1.7</a></li>
+												<li><a href="#">Article 1.8</a></li>
+											</ul>
+										</div>
+										<div class="clear"></div>
 									</div>
 								</section>
 							</li>
 							<li>
 								<section>
 									<h3><a href="section2-fra.html">Section 2</a></h3>
-									<div class="showcase">
-										<div class="menu-col">
+									<div class="mb-sm">
+										<div class="span-2">
 											<section>
-												<h4 class="col-head"><a href="#">Section 2.1</a></h4>
+												<h4><a href="#">Section 2.1</a></h4>
 												<ul>
 													<li><a href="#">Article 2.1.1</a></li>
 													<li><a href="#">Article 2.1.2</a></li>
@@ -175,9 +177,9 @@
 												</ul>
 											</section>
 										</div>
-										<div class="menu-col">
+										<div class="span-2">
 											<section>
-												<h4 class="col-head"><a href="#">Section 2.2</a></h4>
+												<h4><a href="#">Section 2.2</a></h4>
 												<ul>
 													<li><a href="#">Article 2.2.1</a></li>
 													<li><a href="#">Article 2.2.2</a></li>
@@ -190,16 +192,17 @@
 												</ul>
 											</section>
 										</div>
+										<div class="clear"></div>
 									</div>
 								</section>
 							</li>
 							<li>
 								<section>
 									<h3><a href="#">Section 3</a></h3>
-									<div class="showcase">
-										<div class="menu-col">
+									<div class="mb-sm">
+										<div class="span-2">
 											<section>
-												<h4 class="col-head"><a href="#">Section 3.1</a></h4>
+												<h4><a href="#">Section 3.1</a></h4>
 												<ul>
 													<li><a href="#">Article 3.1.1</a></li>
 													<li><a href="#">Article 3.1.2</a></li>
@@ -210,9 +213,9 @@
 												</ul>
 											</section>
 										</div>
-										<div class="menu-col">
+										<div class="span-2">
 											<section>
-												<h4 class="col-head"><a href="#">Section 3.2</a></h4>
+												<h4><a href="#">Section 3.2</a></h4>
 												<ul>
 													<li><a href="#">Article 3.2.1</a></li>
 													<li><a href="#">Article 3.2.2</a></li>
@@ -225,9 +228,9 @@
 												</ul>
 											</section>
 										</div>
-										<div class="menu-col">
+										<div class="span-2">
 											<section>
-												<h4 class="col-head"><a href="#">Section 3.3</a></h4>
+												<h4><a href="#">Section 3.3</a></h4>
 												<ul>
 													<li><a href="#">Article 3.3.1</a></li>
 													<li><a href="#">Article 3.3.2</a></li>
@@ -235,16 +238,17 @@
 												</ul>
 											</section>
 										</div>
+										<div class="clear"></div>
 									</div>
 								</section>
 							</li>
 							<li>
 								<section>
 									<h3><a href="#">Section 4</a></h3>
-									<div class="showcase">
-										<div class="menu-col">
+									<div class="mb-sm">
+										<div class="span-2">
 											<section>
-												<h4 class="col-head"><a href="#">Section 4.1</a></h4>
+												<h4><a href="#">Section 4.1</a></h4>
 												<ul>
 													<li><a href="#">Article 4.1.1</a></li>
 													<li><a href="#">Article 4.1.2</a></li>
@@ -252,7 +256,7 @@
 												</ul>
 											</section>
 											<section>
-												<h4 class="col-head"><a href="#">Section 4.2</a></h4>
+												<h4><a href="#">Section 4.2</a></h4>
 												<ul>
 													<li><a href="#">Article 4.2.1</a></li>
 													<li><a href="#">Article 4.2.2</a></li>
@@ -261,16 +265,16 @@
 												</ul>
 											</section>
 											<section>
-												<h4 class="col-head"><a href="#">Section 4.3</a></h4>
+												<h4><a href="#">Section 4.3</a></h4>
 												<ul>
 													<li><a href="#">Article 4.3.1</a></li>
 													<li><a href="#">Article 4.3.2</a></li>
 												</ul>
 											</section>
 										</div>
-										<div class="menu-col">
+										<div class="span-2">
 											<section>
-												<h4 class="col-head"><a href="#">Section 4.4</a></h4>
+												<h4><a href="#">Section 4.4</a></h4>
 												<ul>
 													<li><a href="#">Article 4.4.1</a></li>
 													<li><a href="#">Article 4.4.2</a></li>
@@ -279,7 +283,7 @@
 												</ul>
 											</section>
 											<section>
-												<h4 class="col-head"><a href="#">Section 4.5</a></h4>
+												<h4><a href="#">Section 4.5</a></h4>
 												<ul>
 													<li><a href="#">Article 4.5.1</a></li>
 													<li><a href="#">Article 4.5.2</a></li>
@@ -289,14 +293,120 @@
 												</ul>
 											</section>
 										</div>
+										<div class="clear"></div>
 									</div>
 								</section>
 							</li>
 							<li>
 								<div><a href="#">Section 5</a></div>
 							</li>
+							<li>
+								<section>
+									<h3><a href="#">Section 6</a></h3>
+									<div class="mb-sm">
+										<div class="span-2">
+											<section>
+												<h4><a href="#">Section 6.1</a></h4>
+												<ul>
+													<li><a href="#">Article 6.1.1</a></li>
+													<li><a href="#">Article 6.1.2</a></li>
+													<li><a href="#">Article 6.1.3</a></li>
+													<li><a href="#">Article 6.1.4</a></li>
+													<li><a href="#">Article 6.1.5</a></li>
+													<li><a href="#">Article 6.1.6</a></li>
+												</ul>
+											</section>
+										</div>
+										<div class="span-2">
+											<section>
+												<h4><a href="#">Section 6.2</a></h4>
+												<ul>
+													<li><a href="#">Article 6.2.1</a></li>
+													<li><a href="#">Article 6.2.2</a></li>
+													<li><a href="#">Article 6.2.3</a></li>
+													<li><a href="#">Article 6.2.4</a></li>
+													<li><a href="#">Article 6.2.5</a></li>
+													<li><a href="#">Article 6.2.6</a></li>
+													<li><a href="#">Article 6.2.7</a></li>
+													<li><a href="#">Article 6.2.8</a></li>
+												</ul>
+											</section>
+										</div>
+										<div class="span-2">
+											<section>
+												<h4><a href="#">Section 6.3</a></h4>
+												<ul>
+													<li><a href="#">Article 6.3.1</a></li>
+													<li><a href="#">Article 6.3.2</a></li>
+													<li><a href="#">Article 6.3.3</a></li>
+												</ul>
+											</section>
+										</div>
+										<div class="span-2">
+											<section>
+												<h4><a href="#">Section 6.4</a></h4>
+												<ul>
+													<li><a href="#">Article 6.4.1</a></li>
+													<li><a href="#">Article 6.4.2</a></li>
+													<li><a href="#">Article 6.4.3</a></li>
+													<li><a href="#">Article 6.4.4</a></li>
+													<li><a href="#">Article 6.4.5</a></li>
+													<li><a href="#">Article 6.4.6</a></li>
+												</ul>
+											</section>
+										</div>
+										<div class="clear"></div>
+									</div>
+								</section>
+							</li>
+							<li>
+								<section>
+									<h3><a href="#">Section 7</a></h3>
+									<div class="mb-sm">
+										<div class="span-2">
+											<section>
+												<h4><a href="#">Section 7.1</a></h4>
+												<ul>
+													<li><a href="#">Article 7.1.1</a></li>
+													<li><a href="#">Article 7.1.2</a></li>
+													<li><a href="#">Article 7.1.3</a></li>
+													<li><a href="#">Article 7.1.4</a></li>
+													<li><a href="#">Article 7.1.5</a></li>
+													<li><a href="#">Article 7.1.6</a></li>
+												</ul>
+											</section>
+										</div>
+										<div class="span-2">
+											<section>
+												<h4><a href="#">Section 7.2</a></h4>
+												<ul>
+													<li><a href="#">Article 7.2.1</a></li>
+													<li><a href="#">Article 7.2.2</a></li>
+													<li><a href="#">Article 7.2.3</a></li>
+													<li><a href="#">Article 7.2.4</a></li>
+													<li><a href="#">Article 7.2.5</a></li>
+													<li><a href="#">Article 7.2.6</a></li>
+													<li><a href="#">Article 7.2.7</a></li>
+													<li><a href="#">Article 7.2.8</a></li>
+												</ul>
+											</section>
+										</div>
+										<div class="span-2">
+											<section>
+												<h4><a href="#">Section 7.3</a></h4>
+												<ul>
+													<li><a href="#">Article 7.3.1</a></li>
+													<li><a href="#">Article 7.3.2</a></li>
+													<li><a href="#">Article 7.3.3</a></li>
+												</ul>
+											</section>
+										</div>
+										<div class="clear"></div>
+									</div>
+								</section>
+							</li>
 						</ul>
-					</div>
+					</div></div>
 				</div>
 			</div>
 			<!-- Site navigation bar ends / Fin de la barre de navigation du site -->
@@ -305,9 +415,10 @@
 			<div id="cn-bc">
 				<h2>Fil d'Ariane</h2>
 				<div id="cn-bc-inner">
-					<ol itemprop="breadcrumb">
+					<ol>
 						<li><a href="home-accueil-megamenu-theme-gcwu-fegc-fra.html">Accueil</a></li>
 						<li><a href="section2-fra.html">Section 2</a></li>
+						<li>2 colonnes - Mégamenu - Thème de la facilité d'emploi GC</li>
 					</ol>
 				</div>
 			</div>
@@ -321,9 +432,9 @@
 	<!-- Columns begin / Début des colonnes -->
 	<div id="cn-cols"><div id="cn-cols-inner" class="equalize">
 		<!-- Main content begins / Début du contenu principal --> 
-		<div id="cn-centre-col" role="main" itemprop="mainContentOfPage"><div id="cn-centre-col-inner">
+		<div id="cn-centre-col" role="main"><div id="cn-centre-col-inner">
 			<!-- Content title begins / Début du titre du contenu -->
-			<h1 id="cn-cont" itemprop="name">Événements - Mégamenu - Thème de la facilité d'emploi GC</h1>
+			<h1 id="cn-cont">2 colonnes - Mégamenu - Thème de la facilité d'emploi GC</h1>
 			<!-- Content Title ends / Fin du titre du contenu -->
 
 <!-- GC Web Usability theme begins / Début du thème de la facilité d'emploi GC -->
@@ -333,6 +444,7 @@
                     <h3>Liaison directe</h3>
                     <p>Dans cette méthode, le calendrier lien avec le premier lien dans chaque événement (se trouve dans l'en-tête de l'événement dans la plupart des cas).</p>
                     <div id="calendar1"></div>
+
                     <div class="wet-boew-calendar-events calendar1">
                         <ol>
                             <li>
@@ -340,12 +452,14 @@
                                     <h4><a href="http://www.canada.gc.ca">Événement de seul-jour</a></h4>
                                     <p><time datetime="2011-03-11">11 mars 2011</time></p>
                                     <p>Description de l'événement</p>
+
                                 </section>
                             </li>
                             <li>
                                 <section>
                                     <h4><a href="http://www.canada.gc.ca">Événement sur plusieurs jours</a></h4>
                                     <p>Le <time datetime="2011-03-22">22 mars 2011</time> au <time datetime="2011-04-26">26 avril 2011</time></p>
+
                                     <p>Description de l'événement</p>
                                 </section>
                             </li>
@@ -354,6 +468,7 @@
                 </section>
                 <section>
                     <h3>Liaison aux détails</h3>
+
                     <p>Dans cette méthode, le calendrier lien avec les détails de l'événement. Ceci est utilisé quand un événement a des liens multiples.</p>
                     <div id="calendar2"></div>
                     <div class="wet-boew-calendar-events event-anchoring calendar2">
@@ -362,24 +477,28 @@
                                 <section>
                                     <h4>Événement de seul-jour</h4>
                                     <p><time datetime="2011-03-11">11 mars 2011</time></p>
+
                                     <p>Description de l'événemen</p>
                                     <p>Liens&#160;:</p>
                                     <ul>
                                         <li><a href="http://www.canada.gc.ca">Événement de seul-jour - Lien 1</a></li>
                                         <li><a href="http://www.canada.gc.ca">Événement de seul-jour - Lien 2</a></li>
                                     </ul>
+
                                 </section>
                             </li>
                             <li>
                                 <section>
                                     <h4>Événement sur plusieurs jours</h4>
                                     <p>Le <time datetime="2011-03-22">22 mars 2011</time> au <time datetime="2011-04-26">26 avril 2011</time></p>
+
                                     <p>Description de l'événemen</p>
                                     <p>Liens&#160;:</p>
                                     <ul>
                                         <li><a href="http://www.canada.gc.ca">Événement sur plusieurs jours - Lien 1</a></li>
                                         <li><a href="http://www.canada.gc.ca">Événement sur plusieurs jours - Lien 2</a></li>
                                     </ul>
+
                                 </section>
                             </li>
                         </ol>
@@ -388,10 +507,12 @@
             </section>
             <section>
                 <h2>Options d'affichage</h2>
+
                 <section>
                     <h3>Filtrage de liste</h3>
                     <p>Cette option filtre des événements de la liste qui ne sont pas pour le mois actuel. Rendre capable cette option en ajoutant la classe <code>calender-display-onshow</code> à chaque événement qui devrait être filtré par le mois.</p>
                     <p>Les événements qui n'ont pas la classe <code>calendar-display-onshow</code> seront visible toujours.</p>
+
                     <div id="calendar3"></div>
 
                     <div class="wet-boew-calendar-events event-anchoring calendar3">
@@ -401,6 +522,7 @@
                                 <li class="calendar-display-onshow">
                                     <section>
                                         <h5><a href="http://www.ec.gc.ca">Événement 1</a></h5>
+
                                         <p><time datetime="2011-03-11">11 mars 2011</time></p>
                                     </section>
                                 </li>
@@ -408,12 +530,14 @@
                                     <section>
                                         <h5><a href="http://canada.gc.ca">Événement 2</a></h5>
                                         <p><time datetime="2011-03-11">11 mars 2011</time></p>
+
                                     </section>
                                 </li>
                                 <li class="calendar-display-onshow">
                                     <section>
                                         <h5>Expo 2010 Shanghai</h5>
                                         <p>Le <time datetime="2011-03-22">22 mars 2011</time> au <time datetime="2011-04-26">26 avril 2011</time></p>
+
                                         <p>Le Pavillon du Canada souligne le dynamisme et la vitalité des villes canadiennes et de leurs résidents.</p>
                                         <p>Pour obtenir de plus amples renseignements, visitez le site Web de Canada à Expo 2010 Shanghai à l’adresse suivante&#160;: <a href="http://www.expo2010canada.gc.ca/index-fra.cfm">www.expo2010canada.gc.ca/index-fra.cfm</a></p>
                                     </section>
@@ -421,6 +545,7 @@
                                 <li class="calendar-display-onshow">
                                     <section>
                                         <h5><a href="http://gcpedia.gc.ca">Événement 4</a></h5>
+
                                         <p><time datetime="2011-03-24">24 mars 2011</time></p>
                                     </section>
                                 </li>
@@ -428,6 +553,7 @@
                                     <section>
                                         <h5><a href="http://www.ec.gc.ca">Événement 6</a></h5>
                                         <p><time datetime="2011-04-11">11 avril 2011</time></p>
+
                                     </section>
                                 </li>
                                 <li class="calendar-display-onshow">
@@ -436,6 +562,7 @@
                                         <p><time datetime="2011-04-23">23 avril 2011</time></p>
                                     </section>
                                 </li>
+
                                 <li class="calendar-display-onshow">
                                     <section>
                                         <h5><a href="http://canada.gc.ca">Événement 17</a></h5>
@@ -444,13 +571,14 @@
                                 </li>
                             </ol>
                         </section>
+
                     </div>
                 </section>
             </section>
 			<!-- Date Modified begins / Début de la date de modification -->
 			<dl id="cn-doc-dates" role="contentinfo">
 				<dt>Date de modification&#160;:</dt>
-				<dd><span><time pubdate="pubdate" itemprop="dateModified">2011-10-31</time></span></dd>
+				<dd><span><time pubdate="pubdate">2011-10-31</time></span></dd>
 			</dl>
 			<div class="clear"></div>
 			<!-- Date Modified ends / Fin de la date de modification -->
@@ -459,7 +587,7 @@
 		<!-- Main content ends / Fin du contenu principal -->
 
 		<!-- Side navigation (left column) begins / Début de la navigation latérale (colonne gauche) -->
-		<div id="cn-left-col" itemscope="itemscope" itemtype="http://schema.org/WPSideBar"><div id="cn-left-col-inner">
+		<div id="cn-left-col"><div id="cn-left-col-inner">
 		<nav role="navigation">
 			<h2 id="cn-nav">Navigation latérale (colonne gauche)</h2>
 			<div class="cn-left-col-default">
@@ -514,14 +642,14 @@
 
 	<!-- Footer begins / Début du pied de page -->
 	<div id="cn-foot"><div id="cn-foot-inner">
-	<footer itemscope="itemscope" itemtype="http://schema.org/WPFooter">
+	<footer>
 		<h2>Pied de page</h2>
 <!-- GC Web Usability theme begins / Début du thème de la facilité d'emploi GC -->
 		<!-- Site footer begins / Début du pied de page du site -->
 		<nav role="navigation">
 			<div id="cn-sft">
 				<h3>Pied de page du site</h3>
-				<div id="cn-sft-inner" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+				<div id="cn-sft-inner">
 					<div id="cn-ft-tctr">
 						<ul>
 							<li class="terms"><a href="#" rel="license">Avis</a></li>
@@ -579,7 +707,7 @@
 			<div id="cn-gcft">
 				<h3>Pied de page du gouvernement du Canada</h3>
 				<div id="cn-gcft-inner">
-					<div id="fip-pcim-gcft" itemscope="itemscope" itemtype="http://schema.org/WPAdBlock">
+					<div id="fip-pcim-gcft">
 						<ul>
 							<li><a rel="external" href="http://canadiensensante.gc.ca/index-fra.php"><span>Santé</span><br />canadiensensante.gc.ca</a></li>
 							<li><a rel="external" href="http://voyage.gc.ca/index-fra.asp"><span>Voyage</span><br />voyage.gc.ca</a></li>

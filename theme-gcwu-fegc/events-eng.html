@@ -4,15 +4,15 @@
 	<meta charset="utf-8" />
 
 	<!--
-    Calendar interface v1.2b3 / Interface du calendrier v1.2b3
-	GC Web Usability theme v1.0b5 / Thème de la facilité d'emploi GC v1.0b5
+    Calendar interface v1.2rc1 / Interface du calendrier v1.2rc1
+	GC Web Usability theme v1.0rc3 / Thème de la facilité d'emploi GC v1.0rc3
 	Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
 	Terms and conditions of use: http://tbs-sct.ircan.gc.ca/projects/gcwwwtemplates/wiki/Terms
 	Conditions régissant l'utilisation : http://tbs-sct.ircan.gc.ca/projects/gcwwwtemplates/wiki/Conditions
 	-->
 
 	<!-- Title begins / Début du titre -->
-	<title>Events Calendar - HTML5 - Web Experience Toolkit (WET)</title>
+	<title>Events Calendar - 2 column - Mega menu - GC Web Usability theme - HTML5 - Web Experience Toolkit (WET)</title>
 	<!-- Title ends / Fin du titre -->
 
 	<!-- Favicon (optional) begins / Début du favicon (optionnel) -->
@@ -74,7 +74,7 @@
 	<!-- Custom scripts/CSS begin / Début des scripts/CSS personnalisés -->
 	<!-- Custom scripts/CSS end / Fin des scripts/CSS personnalisés -->
 </head>
-<body itemscope="itemscope" itemtype="http://schema.org/WebPage">
+<body>
 <!-- Two column layout begins / Début de la mise en page de deux colonnes -->
 <div id="cn-body-inner-2col">
 	<!-- Skip header begins / Début du saut de l'en-tête -->
@@ -88,20 +88,20 @@
 
 	<!-- Header begins / Début de l'en-tête -->
 	<div id="cn-head"><div id="cn-head-inner">
-	<header itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+	<header>
 <!-- GC Web Usability theme begins / Début du thème de la facilité d'emploi GC -->
 		<!-- GC navigation bar begins / Début de la barre de navigation GC -->
 		<nav role="navigation">
 			<div id="cn-gcnb">
 				<h2>Government of Canada navigation bar</h2>
 				<div id="cn-gcnb-inner">
-					<div id="fip-pcim-gcnb" itemscope="itemscope" itemtype="http://schema.org/WPAdBlock">
+					<div id="fip-pcim-gcnb">
 						<div id="cn-sig"><div id="cn-sig-inner"><div id="fip-pcim-sig-eng" title="Government of Canada"><img src="fip-pcim/images/sig-eng.gif" width="214" height="20" alt="Government of Canada" /></div></div></div>
 						<ul>
 							<li id="cn-gcnb1"><a rel="external" href="http://www.canada.gc.ca/home.html">Canada.gc.ca</a></li>
 							<li id="cn-gcnb2"><a rel="external" href="http://www.servicecanada.gc.ca/eng/home.shtml">Services</a></li>
 							<li id="cn-gcnb3"><a rel="external" href="http://www.canada.gc.ca/depts/major/depind-eng.html">Departments</a></li>
-							<li id="cn-gcnb-lang" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement"><a href="events-fra.html" lang="fr">Français</a></li>
+							<li id="cn-gcnb-lang"><a href="events-fra.html" lang="fr">Français</a></li>
 						</ul>
 					</div>
 				</div>
@@ -139,32 +139,35 @@
 			<div id="cn-psnb">
 				<h2>Site navigation bar</h2>
 				<div id="cn-psnb-inner">
-					<div class="wet-boew-menubar wet-boew-megamenu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-						<ul class="wet-boew-menu">
+					<div class="wet-boew-menubar mb-megamenu"><div>
+						<ul class="mb-menu">
 							<li>
 								<section>
 									<h3><a href="#">Section 1</a></h3>
-									<div class="showcase">
-										<ul>
-											<li><a href="#">Item 1.1</a></li>
-											<li><a href="#">Item 1.2</a></li>
-											<li><a href="#">Item 1.3</a></li>
-											<li><a href="#">Item 1.4</a></li>
-											<li><a href="#">Item 1.5</a></li>
-											<li><a href="#">Item 1.6</a></li>
-											<li><a href="#">Item 1.7</a></li>
-											<li><a href="#">Item 1.8</a></li>
-										</ul>
+									<div class="mb-sm">
+										<div class="span-2">
+											<ul>
+												<li><a href="#">Item 1.1</a></li>
+												<li><a href="#">Item 1.2</a></li>
+												<li><a href="#">Item 1.3</a></li>
+												<li><a href="#">Item 1.4</a></li>
+												<li><a href="#">Item 1.5</a></li>
+												<li><a href="#">Item 1.6</a></li>
+												<li><a href="#">Item 1.7</a></li>
+												<li><a href="#">Item 1.8</a></li>
+											</ul>
+										</div>
+										<div class="clear"></div>
 									</div>
 								</section>
 							</li>
 							<li>
 								<section>
 									<h3><a href="section2-eng.html">Section 2</a></h3>
-									<div class="showcase">
-										<div class="menu-col">
+									<div class="mb-sm">
+										<div class="span-2">
 											<section>
-												<h4 class="col-head"><a href="#">Section 2.1</a></h4>
+												<h4><a href="#">Section 2.1</a></h4>
 												<ul>
 													<li><a href="#">Item 2.1.1</a></li>
 													<li><a href="#">Item 2.1.2</a></li>
@@ -175,9 +178,9 @@
 												</ul>
 											</section>
 										</div>
-										<div class="menu-col">
+										<div class="span-2">
 											<section>
-												<h4 class="col-head"><a href="#">Section 2.2</a></h4>
+												<h4><a href="#">Section 2.2</a></h4>
 												<ul>
 													<li><a href="#">Item 2.2.1</a></li>
 													<li><a href="#">Item 2.2.2</a></li>
@@ -190,16 +193,17 @@
 												</ul>
 											</section>
 										</div>
+										<div class="clear"></div>
 									</div>
 								</section>
 							</li>
 							<li>
 								<section>
 									<h3><a href="#">Section 3</a></h3>
-									<div class="showcase">
-										<div class="menu-col">
+									<div class="mb-sm">
+										<div class="span-2">
 											<section>
-												<h4 class="col-head"><a href="#">Section 3.1</a></h4>
+												<h4><a href="#">Section 3.1</a></h4>
 												<ul>
 													<li><a href="#">Item 3.1.1</a></li>
 													<li><a href="#">Item 3.1.2</a></li>
@@ -210,9 +214,9 @@
 												</ul>
 											</section>
 										</div>
-										<div class="menu-col">
+										<div class="span-2">
 											<section>
-												<h4 class="col-head"><a href="#">Section 3.2</a></h4>
+												<h4><a href="#">Section 3.2</a></h4>
 												<ul>
 													<li><a href="#">Item 3.2.1</a></li>
 													<li><a href="#">Item 3.2.2</a></li>
@@ -225,9 +229,9 @@
 												</ul>
 											</section>
 										</div>
-										<div class="menu-col">
+										<div class="span-2">
 											<section>
-												<h4 class="col-head"><a href="#">Section 3.3</a></h4>
+												<h4><a href="#">Section 3.3</a></h4>
 												<ul>
 													<li><a href="#">Item 3.3.1</a></li>
 													<li><a href="#">Item 3.3.2</a></li>
@@ -235,16 +239,17 @@
 												</ul>
 											</section>
 										</div>
+										<div class="clear"></div>
 									</div>
 								</section>
 							</li>
 							<li>
 								<section>
 									<h3><a href="#">Section 4</a></h3>
-									<div class="showcase">
-										<div class="menu-col">
+									<div class="mb-sm">
+										<div class="span-2">
 											<section>
-												<h4 class="col-head"><a href="#">Section 4.1</a></h4>
+												<h4><a href="#">Section 4.1</a></h4>
 												<ul>
 													<li><a href="#">Item 4.1.1</a></li>
 													<li><a href="#">Item 4.1.2</a></li>
@@ -252,7 +257,7 @@
 												</ul>
 											</section>
 											<section>
-												<h4 class="col-head"><a href="#">Section 4.2</a></h4>
+												<h4><a href="#">Section 4.2</a></h4>
 												<ul>
 													<li><a href="#">Item 4.2.1</a></li>
 													<li><a href="#">Item 4.2.2</a></li>
@@ -261,16 +266,16 @@
 												</ul>
 											</section>
 											<section>
-												<h4 class="col-head"><a href="#">Section 4.3</a></h4>
+												<h4><a href="#">Section 4.3</a></h4>
 												<ul>
 													<li><a href="#">Item 4.3.1</a></li>
 													<li><a href="#">Item 4.3.2</a></li>
 												</ul>
 											</section>
 										</div>
-										<div class="menu-col">
+										<div class="span-2">
 											<section>
-												<h4 class="col-head"><a href="#">Section 4.4</a></h4>
+												<h4><a href="#">Section 4.4</a></h4>
 												<ul>
 													<li><a href="#">Item 4.4.1</a></li>
 													<li><a href="#">Item 4.4.2</a></li>
@@ -279,7 +284,7 @@
 												</ul>
 											</section>
 											<section>
-												<h4 class="col-head"><a href="#">Section 4.5</a></h4>
+												<h4><a href="#">Section 4.5</a></h4>
 												<ul>
 													<li><a href="#">Item 4.5.1</a></li>
 													<li><a href="#">Item 4.5.2</a></li>
@@ -289,14 +294,120 @@
 												</ul>
 											</section>
 										</div>
+										<div class="clear"></div>
 									</div>
 								</section>
 							</li>
 							<li>
 								<div><a href="#">Section 5</a></div>
 							</li>
+							<li>
+								<section>
+									<h3><a href="#">Section 6</a></h3>
+									<div class="mb-sm">
+										<div class="span-2">
+											<section>
+												<h4><a href="#">Section 6.1</a></h4>
+												<ul>
+													<li><a href="#">Item 6.1.1</a></li>
+													<li><a href="#">Item 6.1.2</a></li>
+													<li><a href="#">Item 6.1.3</a></li>
+													<li><a href="#">Item 6.1.4</a></li>
+													<li><a href="#">Item 6.1.5</a></li>
+													<li><a href="#">Item 6.1.6</a></li>
+												</ul>
+											</section>
+										</div>
+										<div class="span-2">
+											<section>
+												<h4><a href="#">Section 6.2</a></h4>
+												<ul>
+													<li><a href="#">Item 6.2.1</a></li>
+													<li><a href="#">Item 6.2.2</a></li>
+													<li><a href="#">Item 6.2.3</a></li>
+													<li><a href="#">Item 6.2.4</a></li>
+													<li><a href="#">Item 6.2.5</a></li>
+													<li><a href="#">Item 6.2.6</a></li>
+													<li><a href="#">Item 6.2.7</a></li>
+													<li><a href="#">Item 6.2.8</a></li>
+												</ul>
+											</section>
+										</div>
+										<div class="span-2">
+											<section>
+												<h4><a href="#">Section 6.3</a></h4>
+												<ul>
+													<li><a href="#">Item 6.3.1</a></li>
+													<li><a href="#">Item 6.3.2</a></li>
+													<li><a href="#">Item 6.3.3</a></li>
+												</ul>
+											</section>
+										</div>
+										<div class="span-2">
+											<section>
+												<h4><a href="#">Section 6.4</a></h4>
+												<ul>
+													<li><a href="#">Item 6.4.1</a></li>
+													<li><a href="#">Item 6.4.2</a></li>
+													<li><a href="#">Item 6.4.3</a></li>
+													<li><a href="#">Item 6.4.4</a></li>
+													<li><a href="#">Item 6.4.5</a></li>
+													<li><a href="#">Item 6.4.6</a></li>
+												</ul>
+											</section>
+										</div>
+										<div class="clear"></div>
+									</div>
+								</section>
+							</li>
+							<li>
+								<section>
+									<h3><a href="#">Section 7</a></h3>
+									<div class="mb-sm">
+										<div class="span-2">
+											<section>
+												<h4><a href="#">Section 7.1</a></h4>
+												<ul>
+													<li><a href="#">Item 7.1.1</a></li>
+													<li><a href="#">Item 7.1.2</a></li>
+													<li><a href="#">Item 7.1.3</a></li>
+													<li><a href="#">Item 7.1.4</a></li>
+													<li><a href="#">Item 7.1.5</a></li>
+													<li><a href="#">Item 7.1.6</a></li>
+												</ul>
+											</section>
+										</div>
+										<div class="span-2">
+											<section>
+												<h4><a href="#">Section 7.2</a></h4>
+												<ul>
+													<li><a href="#">Item 7.2.1</a></li>
+													<li><a href="#">Item 7.2.2</a></li>
+													<li><a href="#">Item 7.2.3</a></li>
+													<li><a href="#">Item 7.2.4</a></li>
+													<li><a href="#">Item 7.2.5</a></li>
+													<li><a href="#">Item 7.2.6</a></li>
+													<li><a href="#">Item 7.2.7</a></li>
+													<li><a href="#">Item 7.2.8</a></li>
+												</ul>
+											</section>
+										</div>
+										<div class="span-2">
+											<section>
+												<h4><a href="#">Section 7.3</a></h4>
+												<ul>
+													<li><a href="#">Item 7.3.1</a></li>
+													<li><a href="#">Item 7.3.2</a></li>
+													<li><a href="#">Item 7.3.3</a></li>
+												</ul>
+											</section>
+										</div>
+										<div class="clear"></div>
+									</div>
+								</section>
+							</li>
 						</ul>
-					</div>
+					</div></div>
 				</div>
 			</div>
 			<!-- Site navigation bar ends / Fin de la barre de navigation du site -->
@@ -305,9 +416,10 @@
 			<div id="cn-bc">
 				<h2>Breadcrumb trail</h2>
 				<div id="cn-bc-inner">
-					<ol itemprop="breadcrumb">
+					<ol>
 						<li><a href="home-accueil-megamenu-theme-gcwu-fegc-eng.html">Home</a></li>
 						<li><a href="section2-eng.html">Section 2</a></li>
+						<li>Events Calendar - 2 column - Mega menu - GC Web Usability theme</li>
 					</ol>
 				</div>
 			</div>
@@ -321,9 +433,9 @@
 	<!-- Columns begin / Début des colonnes -->
 	<div id="cn-cols"><div id="cn-cols-inner" class="equalize">
 		<!-- Main content begins / Début du contenu principal -->
-		<div id="cn-centre-col" role="main" itemprop="mainContentOfPage"><div id="cn-centre-col-inner">
+		<div id="cn-centre-col" role="main"><div id="cn-centre-col-inner">
 			<!-- Content title begins / Début du titre du contenu -->
-			<h1 id="cn-cont" itemprop="name">Events Calendar - Mega menu - GC Web Usability theme</h1>
+			<h1 id="cn-cont">Events Calendar - 2 column - Mega menu - GC Web Usability theme</h1>
 			<!-- Content Title ends / Fin du titre du contenu -->
 
 <!-- GC Web Usability theme begins / Début du thème de la facilité d'emploi GC -->
@@ -450,7 +562,7 @@
 			<!-- Date Modified begins / Début de la date de modification -->
 			<dl id="cn-doc-dates" role="contentinfo">
 				<dt>Date modified:</dt>
-				<dd><span><time pubdate="pubdate" itemprop="dateModified">2011-10-31</time></span></dd>
+				<dd><span><time pubdate="pubdate">2011-10-31</time></span></dd>
 			</dl>
 			<div class="clear"></div>
 			<!-- Date Modified ends / Fin de la date de modification -->
@@ -459,7 +571,7 @@
 		<!-- Main content ends / Fin du contenu principal -->
 
 		<!-- Side navigation (left column) begins / Début de la navigation latérale (colonne gauche) -->
-		<div id="cn-left-col" itemscope="itemscope" itemtype="http://schema.org/WPSideBar"><div id="cn-left-col-inner">
+		<div id="cn-left-col"><div id="cn-left-col-inner">
 		<nav role="navigation">
 			<h2 id="cn-nav">Side navigation (left column)</h2>
 			<div class="cn-left-col-default">
@@ -514,14 +626,14 @@
 
 	<!-- Footer begins / Début du pied de page -->
 	<div id="cn-foot"><div id="cn-foot-inner">
-	<footer itemscope="itemscope" itemtype="http://schema.org/WPFooter">
+	<footer>
 		<h2>Footer</h2>
 <!-- GC Web Usability theme begins / Début du thème de la facilité d'emploi GC -->
 		<!-- Site footer begins / Début du pied de page du site -->
 		<nav role="navigation">
 			<div id="cn-sft">
 				<h3>Site footer</h3>
-				<div id="cn-sft-inner" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+				<div id="cn-sft-inner">
 					<div id="cn-ft-tctr">
 						<ul>
 							<li class="terms"><a href="#" rel="license">Terms and conditions</a></li>
@@ -579,7 +691,7 @@
 			<div id="cn-gcft">
 				<h3>Government of Canada footer</h3>
 				<div id="cn-gcft-inner">
-					<div id="fip-pcim-gcft" itemscope="itemscope" itemtype="http://schema.org/WPAdBlock">
+					<div id="fip-pcim-gcft">
 						<ul>
 							<li><a rel="external" href="http://healthycanadians.gc.ca/index-eng.php"><span>Health</span><br />healthycanadians.gc.ca</a></li>
 							<li><a rel="external" href="http://www.voyage.gc.ca/index-eng.asp"><span>Travel</span><br />travel.gc.ca</a></li>

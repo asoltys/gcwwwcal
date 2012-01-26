@@ -5,10 +5,6 @@
  * Terms and conditions of use: http://tbs-sct.ircan.gc.ca/projects/gcwwwtemplates/wiki/Terms
  * Conditions régissant l'utilisation : http://tbs-sct.ircan.gc.ca/projects/gcwwwtemplates/wiki/Conditions
  */
-/* div.cal-days a.calEvent{
-	color:#FFF;
-	background:#36C;
-} */
 
 ul.ev-details{
 	position:absolute;
@@ -22,13 +18,9 @@ ul.ev-details{
 }
 
 div.cal-days ol.cal-day-list li li a {text-align: center;}
-
-ul.ev-details, ul.ev-details a{
-	background-color:#FFF;
-}
-
-
+ul.ev-details, ul.ev-details a {background-color:#FFF;}
 div.ui-datepicker {display: block !important;}
+#cn-centre-col {position:relative;z-index:1000;}
 
 div.cal-days ol.cal-day-list ul.ev-details li{
 	border:0;
@@ -36,13 +28,3 @@ div.cal-days ol.cal-day-list ul.ev-details li{
 	list-style-type:none;
 	
 }
-
-/* div.cal-days ol.cal-day-list ul.ev-details li a, div.cal-days ol.cal-day-list ul.ev-details li a:link{
-	color:#000;
-}
-
-div.cal-days ol.cal-day-list ul.ev-details li a:hover, div.cal-days ol.cal-day-list ul.ev-details li a:focus, div.cal-days ol.cal-day-list ul.ev-details li a:active{
-	color:#FFF;
-} */
-
-#cn-centre-col {position:relative;z-index:1000;}

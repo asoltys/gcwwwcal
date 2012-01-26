@@ -193,7 +193,7 @@ var datepicker = {
 	},
 		
 	addSelectedDateToField : function (fieldid, year, month, day, format){
-		$("#" + fieldid).attr("value", this.formatDate(year, month, day, format));
+		$("#" + fieldid).attr("value", this.formatDate(year, month, day, format)).trigger('change');
 	},
 
 	toggle : function (fieldid, containerid){

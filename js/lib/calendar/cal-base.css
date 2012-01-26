@@ -39,7 +39,6 @@ div.cal-days span.cal-empty, div.cal-days ol.cal-day-list li, ol.cal-weekdays li
 	text-align: center;
 }
 
-div.cal-days ol.cal-day-list li a {text-align: right; padding-right: 0.2em; }
 div.cal-cnt ol.cal-weekdays li, div.cal-days ol.cal-day-list li, div.cal-days span {margin: 1px;}
 div.ui-datepicker {padding-bottom: 0.4em;}
 div.cal-cnt {font-size: 0.9em;}
@@ -57,4 +56,4 @@ span.cal-empty, ol.cal-weekdays li, div.cal-days a, div.cal-days div{
 /* Chrome fix for jQueryUI 1.8.16's clearfix (taken from jQueryUI 1.8.17) */
 .wet-ui-helper-clearfix:before, .wet-ui-helper-clearfix:after { content: ""; display: table; }
 .wet-ui-helper-clearfix:after { clear: both; }
-.wet-ui-helper-clearfix { zoom: 1; }   
+.wet-ui-helper-clearfix { zoom: 1; }

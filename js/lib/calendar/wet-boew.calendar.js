@@ -283,9 +283,13 @@ var calendar = {
 					
 					if (daycount == 1){cells.append(days);}
 					if (daycount > lastday){breakAtEnd = true;}
-					element = $("<li></li>");
+					element = $("<li class=\"ui-datepicker-unselectable ui-state-disabled\"></li>");
 
-					var child = $("<div class=\"ui-state-default ui-datepicker-unselectable ui-state-disabled\"></div>");
+					// var child = $("<div class=\"ui-state-default ui-datepicker-unselectable ui-state-disabled\"></div>");
+                    // var child = $("<div class=\"ui-datepicker-unselectable ui-state-disabled\"></div>");
+                    // child = $("<div class=\"ui-state-default\"></div>").appendTo(child);
+                    
+                    var child = $("<div class=\"ui-state-default\"></div>");
 
                     if (isCurrentDate){
                         child.addClass("ui-state-highlight");

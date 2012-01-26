@@ -119,6 +119,7 @@ var datepicker = {
 
 		days.each(function(index, value){
 			if ((!lLimit && !hLimit) || (lLimit == true && index >= minDate.getDate()) || (hLimit == true && index <= maxDate.getDate())){
+                $(value).removeClass('ui-datepicker-unselectable ui-state-disabled');
 				var obj = $(value).children("div");
 				var link = $("<a href=\"javascript:;\"></a>");
 				var parent = obj.parent()
@@ -193,7 +194,7 @@ var datepicker = {
 	},
 		
 	addSelectedDateToField : function (fieldid, year, month, day, format){
-		$("#" + fieldid).attr("value", this.formatDate(year, month, day, format)).trigger('change');
+		$("#" + fieldid).attr("value", this.formatDate(year, month, day, format));
 	},
 
 	toggle : function (fieldid, containerid){

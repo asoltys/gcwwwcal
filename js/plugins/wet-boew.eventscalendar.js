@@ -167,6 +167,7 @@ var eventsCalendar= {
 			
 			if (date.getMonth() == month && date.getFullYear() == year){
 				var day = $(days[date.getDate()-1]);
+                day.removeClass('ui-datepicker-unselectable ui-state-disabled');
 				//Gets the day cell to display an event
 				var content = day.children("div").html();
 				var dayEvents;

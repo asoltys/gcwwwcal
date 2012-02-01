@@ -189,7 +189,17 @@ var calendar = {
 		var form = $("<form id=\"cal-" + calendarid + "-goto\" role=\"form\" style=\"display:none;\" action=\"\"><fieldset><legend>" + this.dictionary.goToTitle + "</legend></fieldset></form>");
 		form.submit(function(){calendar.onGoTo(calendarid, minDate, maxDate); return false});
 		var fieldset = form.children("fieldset");
-		
+
+		//Create the year field
+		var yearContainer =$("<div class=\"cal-goto-year\"><label for=\"cal-" + calendarid + "-goto-year\" class=\"cn-invisible\">" + this.dictionary.goToYear + "</label></div>")
+		var yearField = $("<select id=\"cal-" + calendarid + "-goto-year\"></select>");
+		for(var y=minDate.getFullYear();y<=maxDate.getFullYear();y++){
+			yearField.append($('<option value="' + y + '"' + (y == year? ' selected="selected"' : '') + '>' + y+ '</option>'));
+		}
+
+		yearContainer.append(yearField);
+		fieldset.append(yearContainer);
+
 		//Create the list of month field
 		var monthContainer = $("<div class=\"cal-goto-month\"><label for=\"cal-" + calendarid + "-goto-month\" class=\"cn-invisible\">" + this.dictionary.goToMonth + "</label></div>");
 		
@@ -200,16 +210,6 @@ var calendar = {
 
 		monthContainer.append(monthField);
 		fieldset.append(monthContainer);
-		
-		//Create the year field
-		var yearContainer =$("<div class=\"cal-goto-year\"><label for=\"cal-" + calendarid + "-goto-year\" class=\"cn-invisible\">" + this.dictionary.goToYear + "</label></div>")
-		var yearField = $("<select id=\"cal-" + calendarid + "-goto-year\"></select>");
-		for(var y=minDate.getFullYear();y<=maxDate.getFullYear();y++){
-			yearField.append($('<option value="' + y + '"' + (y == year? ' selected="selected"' : '') + '>' + y+ '</option>'));
-		}
-
-		yearContainer.append(yearField);
-		fieldset.append(yearContainer);
 		
 		var buttonContainer = $("<div class=\"cal-goto-button\"></div>");
 		var button = $("<input type=\"submit\" value=\"" + this.dictionary.goToButton + "\" />")

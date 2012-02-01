@@ -19,7 +19,7 @@ div.cal-month {
 
 ol.cal-weekdays li {text-align: center;}
 .cal-goto-link {text-align: center; margin: 0;}
-.cal-goto-month, .cal-goto-button {float: left;}
+.cal-goto-year, .cal-goto-button {float: left;}
 
 div.cal-days ol.cal-day-list, div.cal-cnt ol.cal-weekdays{
 	list-style-type:none; 

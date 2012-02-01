@@ -11,6 +11,8 @@ ol.cal-weekdays{
     font-weight: bold;
 }
 
+.cal-container legend {color: #FFF; margin-top: 5px;}
+
 div.cal-month {
     text-align: center;
 }

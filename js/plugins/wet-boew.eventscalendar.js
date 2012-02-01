@@ -220,10 +220,14 @@ var eventsCalendar= {
 				dayEvents.append(eventDetails);
 				
 				var item_link = eventDetails.children("a");
+                
+                item_link.hover(function(){$(this).addClass("ui-state-hover");});
+                item_link.mouseout(function(){$(this).removeClass("ui-state-hover");});    
 				
 				//Hide day events when the last event for the day loose focus
 				item_link.bind("blur", {details: dayEvents}, function (event) {
 					event.data.details.removeClass("ev-details");
+                    $(this).removeClass("ui-state-hover");
 					event.data.details.addClass("cn-invisible");
 				});
 				
@@ -231,6 +235,7 @@ var eventsCalendar= {
 				item_link.bind("focus", {details: dayEvents}, function (event) {
 					event.data.details.removeClass("cn-invisible");
 					event.data.details.addClass("ev-details");
+                    $(this).addClass("ui-state-hover");
 				});
 
 			} // end of date range visible

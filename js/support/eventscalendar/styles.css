@@ -6,11 +6,12 @@
  * Conditions régissant l'utilisation : http://tbs-sct.ircan.gc.ca/projects/gcwwwtemplates/wiki/Conditions
  */
 
-ul.ev-details{
+/* ul.ev-details{ */
+#cn-centre-col ol ul.ev-details {
 	position:absolute;
 	z-index:5;
 	border:1px solid #333;
-	padding:0.5em;
+	padding:0.5em !important;
 	width:10em;
 	margin:0;
 	margin-top:-0.5em;
@@ -18,7 +19,8 @@ ul.ev-details{
 }
 
 div.cal-days ol.cal-day-list li li a {text-align: center;}
-ul.ev-details, ul.ev-details a {background-color:#FFF;}
+ul.ev-details {background-color:#FFF;}
+.cal-container a[href]:hover, .cal-container a[href]:focus {color: #FFF;}
 div.ui-datepicker {display: block !important;}
 #cn-centre-col {position:relative;z-index:1000;}
 
@@ -26,7 +28,6 @@ div.cal-days ol.cal-day-list ul.ev-details li{
 	border:0;
 	width:100%;
 	list-style-type:none;
-	
 }
 
 /* .cn-invisible fix for IE7 */

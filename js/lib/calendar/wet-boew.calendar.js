@@ -56,6 +56,7 @@ var calendar = {
 			objCalendar = $("<div id=\"cal-" + containerid +"-cnt\" class=\"cal-cnt\"></div>");
 			container.append(objCalendar);
 		}
+        
 		//Creates the calendar header
 		var calHeader 
 		if (container.children("div#cal-" + containerid +"-cnt").children(".cal-header").length > 0){
@@ -66,17 +67,14 @@ var calendar = {
 		
 		calHeader.prepend("<div class=\"cal-month\">" + this.dictionary.monthNames[month] + " " + year + "</div>" );
 		
-		if(shownav)
-		{
+		if(shownav){
 			//Create the month navigation
 			var monthNav = this.createMonthNav(containerid, year, month, minDate, maxDate)
-			if ($("#cal-" + containerid + "-monthnav").length < 1)
-			{
+			if ($("#cal-" + containerid + "-monthnav").length < 1){
 				calHeader.append(monthNav);
 			}
 			
-			if (container.children("div#cal-" + containerid +"-cnt").children(".cal-header").children(".cal-goto").length < 1)
-			{
+			if (container.children("div#cal-" + containerid +"-cnt").children(".cal-header").children(".cal-goto").length < 1){
 				//Create the go to form
 				calHeader.append(this.createGoToForm(containerid, year, month, minDate, maxDate));
 			}
@@ -92,7 +90,7 @@ var calendar = {
 		var days = this.createDays(containerid, year, month)
 		var daysList = days.children("ol.cal-day-list").children("li");
 		objCalendar.append(days);
-		
+        
 		//Trigger the calendarDisplayed Event
 		container.trigger('calendarDisplayed', [year, month, daysList]);
 	},
@@ -184,6 +182,28 @@ var calendar = {
 		return monthNav;
 	},
 	
+    yearChanged : function(event){
+        var year = $(this).val(),
+            minDate = event.data.minDate,
+            maxDate = event.data.maxDate,
+            monthField = event.data.monthField;
+        
+        var minMonth=0, maxMonth=11;
+        if(year == minDate.getFullYear()) {
+            minMonth = minDate.getMonth();
+        }
+
+        if(year == maxDate.getFullYear()) {
+            maxMonth = maxDate.getMonth();
+        }
+
+        var month = monthField.val();
+        monthField.empty();
+        for(var i=minMonth; i<=maxMonth; i++){ // TODO: make sure minMonth < maxMonth
+			monthField.append("<option value=\"" + i + "\"" + ((i == month)? " selected=\"selected\"" : "") + ">" + calendar.dictionary.monthNames[i] + "</option>");
+		}
+    },
+    
 	createGoToForm : function (calendarid, year, month, minDate, maxDate){
 		var goToForm = $("<div class=\"cal-goto\"></div>");
 		var form = $("<form id=\"cal-" + calendarid + "-goto\" role=\"form\" style=\"display:none;\" action=\"\"><fieldset><legend>" + this.dictionary.goToTitle + "</legend></fieldset></form>");
@@ -191,7 +211,7 @@ var calendar = {
 		var fieldset = form.children("fieldset");
 
 		//Create the year field
-		var yearContainer =$("<div class=\"cal-goto-year\"><label for=\"cal-" + calendarid + "-goto-year\" class=\"cn-invisible\">" + this.dictionary.goToYear + "</label></div>")
+		var yearContainer = $("<div class=\"cal-goto-year\"><label for=\"cal-" + calendarid + "-goto-year\" class=\"cn-invisible\">" + this.dictionary.goToYear + "</label></div>")
 		var yearField = $("<select id=\"cal-" + calendarid + "-goto-year\"></select>");
 		for(var y=minDate.getFullYear();y<=maxDate.getFullYear();y++){
 			yearField.append($('<option value="' + y + '"' + (y == year? ' selected="selected"' : '') + '>' + y+ '</option>'));
@@ -202,15 +222,16 @@ var calendar = {
 
 		//Create the list of month field
 		var monthContainer = $("<div class=\"cal-goto-month\"><label for=\"cal-" + calendarid + "-goto-month\" class=\"cn-invisible\">" + this.dictionary.goToMonth + "</label></div>");
-		
 		var monthField = $("<select id=\"cal-" + calendarid + "-goto-month\"></select>");
-		$(this.dictionary.monthNames).each(function(index, value){
-			monthField.append("<option" + ((index == month)? " selected=\"selected\"" : "") + ">" + value + "</option>");
-		});
 
 		monthContainer.append(monthField);
 		fieldset.append(monthContainer);
-		
+        
+        // Update the list of available months when changing the year
+        yearField.bind('change', {minDate: minDate, maxDate: maxDate, monthField: monthField}, this.yearChanged);
+        yearField.change(); // Populate initial month list
+        
+        
 		var buttonContainer = $("<div class=\"cal-goto-button\"></div>");
 		var button = $("<input type=\"submit\" value=\"" + this.dictionary.goToButton + "\" />")
 		buttonContainer.append(button);
@@ -380,7 +401,7 @@ var calendar = {
 		var container = $("#" + calendarid);
 		
 		var fieldset = container.find("fieldset");
-		var month = fieldset.find(".cal-goto-month select option:selected").index();
+        var month = fieldset.find(".cal-goto-month select option:selected").attr('value');
 		var year = parseInt(fieldset.find(".cal-goto-year select").attr("value"));
 		
 		if(!(month< minDate.getMonth() && year <= minDate.getFullYear()) && !(month > maxDate.getMonth() && year >= maxDate.getFullYear())){

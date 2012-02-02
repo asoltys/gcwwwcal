@@ -5,9 +5,7 @@
  * Conditions régissant l'utilisation : http://tbs-sct.ircan.gc.ca/projects/gcwwwtemplates/wiki/Conditions
  */
 var eventsCalendar= {
-	//params :  Utils.loadParamsFromScriptID("eventscalendar"),
-	
-	init : function(){
+	init: function(){
 		var date = (new Date);
 		var year = date.getFullYear();
 		var month = date.getMonth();
@@ -25,7 +23,6 @@ var eventsCalendar= {
 				} else {
 					month = $('.month', this).text() - 1;
 				}
-
 			}
 			
 			var events = eventsCalendar.getEvents(this);
@@ -71,8 +68,8 @@ var eventsCalendar= {
 				var link = _origLink.attr("href");
 				/*** Modification direct-linking or page-linking
 				*     - added the ability  to have class set the behaviour of the links
-				*         - default is to use the link of the item as the event link in the calendar
-				*         - 'event-anchoring' class dynamically generates page anchors on the links it maps to the event
+				*     - default is to use the link of the item as the event link in the calendar
+				*     - 'event-anchoring' class dynamically generates page anchors on the links it maps to the event
 				* ***/
 				if (!direct_linking){
 					var link_id = (event.attr('id')) ? event.attr('id') : eventsCalendar.randomId(6);
@@ -140,7 +137,7 @@ var eventsCalendar= {
 	/*** Modification Random Id generating function
 	*  @param sint  - length of randomly generated string
 	***/
-	randomId : function(sint) {
+	randomId: function(sint) {
 		var s= '';
 		var randomchar = function(){
 			var n= Math.floor(Math.random()*62);
@@ -153,7 +150,7 @@ var eventsCalendar= {
 		return "id" + s;
 	},
 	
-	addEvents : function(year, month, days, containerid, eventslist){
+	addEvents: function(year, month, days, containerid, eventslist){
 		var container = $("#" + containerid);
 		//Fix required to make up with the IE z-index behavior mismatch
 		days.each(function(index, day){
@@ -269,7 +266,7 @@ var eventsCalendar= {
 //          	}).removeClass('cn-invisible');
 	
 		// FIXED: by adding a class to the heading of every event we now can filter view through lazy css-filtering
-		$('.'+ calendarid +' li.calendar-display-onshow').has(':header[class*=filter-'+year+'-'+calendar.strPad(month+1,2)+']').removeClass('cn-invisible');
+		$('.'+ calendarid +' li.calendar-display-onshow').has(':header[class*=filter-'+year+'-'+calendar.strPad(parseInt(month)+1,2)+']').removeClass('cn-invisible');
 	}
 
 }

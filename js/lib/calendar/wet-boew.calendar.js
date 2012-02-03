@@ -198,7 +198,13 @@ var calendar = {
         }
 
         var month = monthField.val();
-        monthField.empty();
+
+        // Can't use monthField.empty() or .html('') on <select> in IE
+        // http://stackoverflow.com/questions/3252382/why-does-dynamically-populating-a-select-drop-down-list-element-using-javascript
+        while(monthField.children('option').length) {
+            monthField.get(0).remove(0);
+        }
+        
         for(var i=minMonth; i<=maxMonth; i++){ // TODO: make sure minMonth < maxMonth
 			monthField.append("<option value=\"" + i + "\"" + ((i == month)? " selected=\"selected\"" : "") + ">" + calendar.dictionary.monthNames[i] + "</option>");
 		}
@@ -226,11 +232,18 @@ var calendar = {
 
 		monthContainer.append(monthField);
 		fieldset.append(monthContainer);
-        
-        // Update the list of available months when changing the year
-        yearField.bind('change', {minDate: minDate, maxDate: maxDate, monthField: monthField}, this.yearChanged);
-        yearField.change(); // Populate initial month list
-        
+
+        // FIXME: Handle month filtering for IE6
+        if(jQuery.browser.msie && jQuery.browser.version == '6.0') {
+            $(this.dictionary.monthNames).each(function(index, value){
+                monthField.append("<option value=\"" + index + "\"" + ((index == month)? " selected=\"selected\"" : "") + ">" + value + "</option>");
+            });
+        }
+        else {
+            // Update the list of available months when changing the year
+            yearField.bind('change', {minDate: minDate, maxDate: maxDate, monthField: monthField}, this.yearChanged);
+            yearField.change(); // Populate initial month list        
+        }
         
 		var buttonContainer = $("<div class=\"cal-goto-button\"></div>");
 		var button = $("<input type=\"submit\" value=\"" + this.dictionary.goToButton + "\" />")
@@ -401,7 +414,7 @@ var calendar = {
 		var container = $("#" + calendarid);
 		
 		var fieldset = container.find("fieldset");
-        var month = fieldset.find(".cal-goto-month select option:selected").attr('value');
+        var month = parseInt(fieldset.find(".cal-goto-month select option:selected").attr('value'));
 		var year = parseInt(fieldset.find(".cal-goto-year select").attr("value"));
 		
 		if(!(month< minDate.getMonth() && year <= minDate.getFullYear()) && !(month > maxDate.getMonth() && year >= maxDate.getFullYear())){

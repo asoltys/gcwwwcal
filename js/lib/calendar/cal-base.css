@@ -58,7 +58,7 @@ span.cal-empty, ol.cal-weekdays li, div.cal-days a, div.cal-days div{
 /* IE6 contrast */
 .cal-container li a:link {color: #000;}
 .cal-container li a:visited {color: #000;}
-.cal-goto-link a:visited, .cal-container li a:hover {color: #FFF;}
+.cal-goto-link a:visited, .cal-container li a:hover, .cal-container li a:active {color: #FFF;}
 
 /* Contrast */
 .cal-container a[href].ui-state-hover:hover, .cal-container a[href].ui-state-hover:focus {color: #FFF;}

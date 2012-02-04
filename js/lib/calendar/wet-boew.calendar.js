@@ -1,8 +1,7 @@
 /*!
- * Calendar interface v1.2rc3 / Interface du calendrier v1.2rc3
+ * Calendar interface v1.2 / Interface du calendrier v1.2
  * Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
- * Terms and conditions of use: http://tbs-sct.ircan.gc.ca/projects/gcwwwtemplates/wiki/Terms
- * Conditions régissant l'utilisation : http://tbs-sct.ircan.gc.ca/projects/gcwwwtemplates/wiki/Conditions
+ * www.tbs.gc.ca/ws-nw/wet-boew/terms / www.sct.gc.ca/ws-nw/wet-boew/conditions
  */
 var calendar = {
 	// Used to store localized strings for your plugin.

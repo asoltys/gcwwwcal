@@ -1,5 +1,5 @@
 /*!
- * Calendar interface v1.2 / Interface du calendrier v1.2
+ * Calendar interface v1.21 / Interface du calendrier v1.21
  * Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
  * www.tbs.gc.ca/ws-nw/wet-boew/terms / www.sct.gc.ca/ws-nw/wet-boew/conditions
  */

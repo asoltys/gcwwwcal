@@ -105,7 +105,7 @@ var eventsCalendar= {
 						events.maxDate = date;
 					}
 
-					events.list[events.iCount] = { "title": title, "date": date,"href": link };
+					events.list[events.iCount] = { "title": title, "date": new Date(date.getTime()),"href": link };
 					date  = new Date( date.setDate(date.getDate() + 1) );
 					// add a viewfilter
 					if (!_objTitle.hasClass("filter-" + (date.getFullYear()) + "-" + calendar.strPad(date.getMonth()+1,2) ) ) {  _objTitle.addClass("filter-" + (date.getFullYear()) + "-" + calendar.strPad(date.getMonth()+1,2) ) }

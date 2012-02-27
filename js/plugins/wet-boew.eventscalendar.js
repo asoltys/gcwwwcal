@@ -26,6 +26,11 @@ var eventsCalendar= {
 			
 			var events = eventsCalendar.getEvents(this);
 			var containerid = $(this).attr('class').split(' ').slice(-1);
+            
+            if($("#cn-centre-col-inner").css("padding-left") == "0px") {
+                $("#" + containerid).css("margin-left", "10px");
+            }
+
 			$("#" + containerid).bind("calendarDisplayed", function (e, year, month, days) {
 				eventsCalendar.addEvents(year, month, days, containerid, events.list);
 				eventsCalendar.showOnlyEventsFor(year,month, containerid);

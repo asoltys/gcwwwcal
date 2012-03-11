@@ -61,7 +61,7 @@ span.cal-empty, ol.cal-weekdays li, div.cal-days a, div.cal-days div{
 
 /* Contrast */
 .cal-container a[href].ui-state-hover:hover, .cal-container a[href].ui-state-hover:focus {color: #FFF;}
-.cal-container a[href].ui-state-highlight:hover {color: #000;}
+.cal-container a[href].ui-state-highlight:hover, .cal-container a[href].ui-state-highlight:focus {color: #000;}
 
 /* Chrome fix for jQueryUI 1.8.16's clearfix (taken from jQueryUI 1.8.17) */
 .wet-ui-helper-clearfix:before, .wet-ui-helper-clearfix:after { content: ""; display: table; }

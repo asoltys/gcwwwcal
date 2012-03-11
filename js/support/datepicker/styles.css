@@ -6,7 +6,7 @@
  */
 .cal-container.picker-overlay{
 	position:absolute;
-	z-index:1000!important;
+	z-index:498!important;
 	margin-top:-2em;
 }
 

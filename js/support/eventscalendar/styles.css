@@ -1,6 +1,6 @@
 @charset "utf-8";
 /*!
- * Calendar interface v1.22 / Interface du calendrier v1.22
+ * Calendar interface v1.23 / Interface du calendrier v1.23
  * Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
  * www.tbs.gc.ca/ws-nw/wet-boew/terms / www.sct.gc.ca/ws-nw/wet-boew/conditions
  */
@@ -19,7 +19,7 @@
 div.cal-days ol.cal-day-list li li a {text-align: center;}
 ul.ev-details {background-color:#FFF;}
 div.ui-datepicker {display: block !important;}
-#cn-centre-col {position:relative;z-index:1000;}
+#cn-centre-col {position:relative;z-index:498;}
 
 div.cal-days ol.cal-day-list ul.ev-details li{
 	border:0;
